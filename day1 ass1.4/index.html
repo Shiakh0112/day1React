@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background-color: hsl(210deg 28.57% 97.25%);
+
+  }
+</style>
+
+<body>
+
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    function MailBox() {
+      function SentMessage() {
+        alert(" Subscribe successfully")
+      }
+      return (
+        <>
+          <div class="main-mailbox" style={{ margin: "auto", width: "50%", textAlign: "center", backgroundColor: "white", borderRadius: "15px", padding: "100px" }}>
+            <div class="mail-img">
+              <img width="250px" src="./8743964.png" alt="" />
+
+            </div>
+            <h1 style={{ fontSize: "65px", textTransform: "uppercase", fontFamily: "sans-serif" }}>subscribe</h1>
+            <p style={{ fontSize: "40px", color: "#728197" }}>Subscribe to our newsletter & stay up date!</p>
+            <div class="send-mail" style={{ display: "flex", alignItem: "center", justifyContent: "center", gap: "40px", width: "100%" }}>
+              <input type="email" name="" id="email" placeholder="john@doe.net" required style={
+                { width: "50%", height: "20px", borderRadius: "50px", outline: "none", backgroundColor: "hsl(210deg 28.57% 97.25%)", border: "none", padding: "20px", fontSize: "20px", color: "#acb8c8" }
+              } />
+              <button onClick={SentMessage} id="btn" style={{ width: "25%", padding: "10px", borderRadius: "50px", outline: "none", border: "none", fontSize: "25px", backgroundColor: "#4399e1", color: "white" }}>
+                subscribe
+              </button>
+            </div>
+          </div>
+        </>
+      )
+
+    }
+
+
+    function App() {
+      return <MailBox />
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<App />)
+  </script>
+</body>
+
+</html>

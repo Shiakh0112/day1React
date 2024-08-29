@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: hsl(210deg 28.57% 97.25%);
+    color: hsl(221.25deg 12.9% 24.31%);
+    height: 100vh;
+  }
+
+  #product {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: white;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .inner-product {}
+
+
+  .image-section {
+    width: 100%;
+
+    text-align: center;
+
+
+  }
+
+  .inner-product .image-section img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .title h1 {
+    padding: 0px;
+    margin-bottom: -15px;
+  }
+
+  .description .p1 {
+    font-size: 20px;
+    color: hsl(215.56deg 15.08% 64.9%);
+  }
+
+  h3 {
+    color: hsl(39.25deg 66.83% 60.98%);
+  }
+
+  .features h3 {
+    margin-bottom: -2px;
+  }
+
+  .features-details {
+    display: flex;
+    margin-left: -40px;
+
+    gap: 200px;
+
+
+  }
+
+  .features-details li {
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 30px;
+    height: 41px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 23px;
+    word-spacing: 5px;
+    font-family: sans-serif;
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer p {
+    word-spacing: 1px;
+  }
+
+  footer p i {
+    margin: 0px 10px;
+  }
+
+  .product-details p {
+    font-weight: 600;
+  }
+
+  .product-details p span {
+    font-weight: 300;
+  }
+</style>
+
+<body>
+  <div id="root">
+
+  </div>
+
+
+
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+
+
+    function SingleProductPage() {
+      return (
+        <>
+
+          <div class="inner-product">
+            <div class="image-section">
+              <img src="./Screenshot 2024-08-27 225114.png" alt="" />
+            </div>
+            <div class="product-details-page">
+              <div class="title">
+                <h1>Automatic Watch</h1>
+                <p>$350.00 USD</p>
+
+              </div>
+              <div class="description">
+                <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nobis numquam atque dolorum illum dolores Lorem ipsum.</p>
+                <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique, dolor accusamus repellendus aliquid labore, odio fugiat necessitatibus sit autem placeat modi dolores doloribus.</p>
+              </div>
+              <hr />
+              <div class="features">
+                <h3>FEATURES</h3>
+                <div class="features-details">
+                  <ul>
+                    <li>Chronograph</li>
+                    <li>Master Chronometer Certified</li>
+                    <li>Tachymeter</li>
+                  </ul>
+                  <ul>
+                    <li>Anti-magnetic</li>
+                    <li>Chronometer</li>
+                    <li>Small seconds</li>
+                  </ul>
+                </div>
+
+              </div>
+              <hr />
+              <div class="product-details">
+                <h3>PRODUCT DETAILS</h3>
+                <p>Between lugs:  <span>: 20 mm</span> </p>
+                <p>Bracelet:  <span>: leather strap</span> </p>
+                <p>Case:  <span>Steel</span> </p>
+                <p> Case diameter: <span>42 mm</span> </p>
+                <p>Dial color:  <span>Black</span> </p>
+                <p>Crystal: <span> Domed, scratch-resistant sapphire crystal with anti-reflective treatment inside</span> </p>
+                <p> Water resistance: <span>5 bar (50 metres / 167 feet)</span> </p>
+              </div>
+            </div>
+
+            <button class="btn">ADD TO CART</button>
+          </div>
+
+
+
+
+        </>
+      )
+    }
+    function Footer() {
+      return (
+        <>
+          <footer>
+            <p class="footer">
+              <i class="fa-solid fa-truck"></i>
+              2-3 business days delivery</p>
+          </footer>
+
+        </>
+      )
+    }
+
+    function App() {
+
+      return (
+        <div id="product">
+          <SingleProductPage />
+          <Footer />
+        </div>
+      )
+
+
+    }
+
+
+
+
+
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />)
+  </script>
+</body>
+
+</html>
